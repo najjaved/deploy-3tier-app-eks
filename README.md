@@ -44,5 +44,7 @@ eksctl create cluster \
 kubectl config get-contexts
 kubectl get nodes
 ```
-### 3. Create Deployment and Service manifests for the PostgreSQL 
+### 3. Create Deployment and Service manifests for the PostgreSQL
+### 4. 
+### 5. Create the API Deployment & Service
 
