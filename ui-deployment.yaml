@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ui-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: basic3tier-ui
+  template:
+    metadata:
+      labels:
+        app: basic3tier-ui
+    spec:
+      containers:
+      - name: ui-container
+        image: najjaved/basic3tier-ui:latest
+        ports:
+        - containerPort: 80
+        # Optional environment variable if using dynamic config
+        # env:
+        # - name: API_URL
+        #   value: "http://api-service"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ui-service
+spec:
+  selector:
+    app: basic3tier-ui
+  ports:
+    - port: 80
+      targetPort: 80
+  type: ClusterIP
