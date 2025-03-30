@@ -75,6 +75,13 @@ kubectl get pv,pvc
 ### 6. Install NGINX Ingress Controller
 Run the following command to deploy the Nginx Ingress Controller using Helm in the Correct Namespace:
 ```
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml
+kubectl get svc -n ingress-nginx
+If service missing:
+kubectl rollout restart deployment ingress-nginx-controller -n ingress-nginx
+```
+OR installation via Helm:
+```
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 helm repo update
 helm search repo ingress-nginx
@@ -94,7 +101,34 @@ kubectl get svc --namespace ingress-nginx
 
 ### 7. Exposing the Frontend with an Ingress
 To make the UI accessible from the internet, create an Ingress resource that sends traffic from the NGINX Ingress Controller load balancer to the services.
+Then:
+```
+kubectl apply -f ui-ingress.yaml
+kubectl get ingress
+```
+Verify the Application:
+Open the Ingress URL in your browser. You should see the UI communicating with the API and database:
+```
+http://<INGRESS-CONTROLLER-ADDRESS>/
+```
 
+## Cleanup
+```eksctl delete cluster --name <cluster-name> --region <aws-region-name>``` OR ```eksctl delete cluster -f file-name.yaml```
+
+```
+kubectl delete deployment <deployment-name>
+kubectl delete service <service-name>
+
+kubectl patch pvc <pvc-name> -p '{"metadata":{"finalizers":null}}'
+kubectl delete pvc <pvc-name> --force --grace-period=0
+kubectl get pvc
+
+kubectl get ingress
+kubectl delete ingress <ingress-name>
+
+helm uninstall nginx-ingress --namespace ingress-nginx
+kubectl delete namespace ingress-nginx
+```
 
 
 
