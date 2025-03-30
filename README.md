@@ -111,6 +111,49 @@ Open the Ingress URL in your browser. You should see the UI communicating with t
 ```
 http://<INGRESS-CONTROLLER-ADDRESS>/
 ```
+### Steps to have StorageClasses and PVCs:
+
+1. Enable eksctl plugin to allow the cluster to use EBS:
+``` eksctl create addon --name aws-ebs-csi-driver --cluster <eks-cluster-name> --region <aws-region-name>```
+ 
+2. Using the AWS Management Console
+- Log in to the AWS Console:
+- Navigate to the IAM service.
+- Find the Node Role:
+- Search for the role that your nodes use, it's something like eksctl-<eks-cluster-name>-nodeg-NodeInstanceRole-v2an4e3efyCW.
+- Attach an Inline Policy:
+	 - Click on the role and go to the "Permissions" tab.
+	 - Choose "Add inline policy".
+- Switch to the "JSON" tab and paste the policy below:
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:CreateVolume",
+                "ec2:DeleteVolume",
+                "ec2:AttachVolume",
+                "ec2:DetachVolume",
+                "ec2:ModifyVolume",
+                "ec2:DescribeVolumes",
+                "ec2:DescribeVolumeStatus",
+                "ec2:DescribeAvailabilityZones",
+                "ec2:DescribeInstances",
+                "ec2:DescribeSnapshots",
+                "ec2:CreateSnapshot",
+                "ec2:DeleteSnapshot",
+                "ec2:DescribeTags",
+                "ec2:CreateTags",
+                "ec2:DeleteTags"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
+Review and save the policy. Now, you can use StorageClasses and PVCs.
 
 ## Cleanup
 ```eksctl delete cluster --name <cluster-name> --region <aws-region-name>``` OR ```eksctl delete cluster -f file-name.yaml```
