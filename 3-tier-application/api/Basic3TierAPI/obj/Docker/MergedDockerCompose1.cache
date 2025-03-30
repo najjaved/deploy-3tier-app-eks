@@ -1,0 +1,89 @@
+name: dockercompose16893653877832486288
+services:
+  basic-3tier-postgres:
+    container_name: basic-3tier-postgres
+    environment:
+      POSTGRES_DB: basic3tier
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_USER: postgres
+    image: postgres:latest
+    networks:
+      basic3tier: null
+    ports:
+    - mode: ingress
+      target: 5432
+      published: "5432"
+      protocol: tcp
+    volumes:
+    - type: volume
+      source: postgres_data
+      target: /var/lib/postgresql/data
+      volume: {}
+  frontend:
+    build:
+      context: D:\varnode.ai\Workspace\basic-3tier-app\src\ui
+      dockerfile: Dockerfile
+    container_name: basic-3tier-ui
+    depends_on:
+      basic-3tier-postgres:
+        condition: service_started
+        required: true
+      webapi:
+        condition: service_started
+        required: true
+    networks:
+      basic3tier: null
+    ports:
+    - mode: ingress
+      target: 80
+      published: "5000"
+      protocol: tcp
+  pgadmin:
+    container_name: pgadmin4_container
+    depends_on:
+      basic-3tier-postgres:
+        condition: service_started
+        required: true
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@postgres.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    image: dpage/pgadmin4:latest
+    networks:
+      basic3tier: null
+    ports:
+    - mode: ingress
+      target: 80
+      published: "5431"
+      protocol: tcp
+    volumes:
+    - type: volume
+      source: pgadmin_data
+      target: /var/lib/pgadmin
+      volume: {}
+  webapi:
+    build:
+      context: D:\varnode.ai\Workspace\basic-3tier-app\src\api
+      dockerfile: Dockerfile
+    container_name: basic-3tier-api
+    depends_on:
+      basic-3tier-postgres:
+        condition: service_started
+        required: true
+    environment:
+      ConnectionStrings__Basic3Tier: Host=basic-3tier-postgres;Port=5432;Database=basic3tier;Username=postgres;Password=admin123
+    networks:
+      basic3tier: null
+    ports:
+    - mode: ingress
+      target: 80
+      published: "7000"
+      protocol: tcp
+networks:
+  basic3tier:
+    name: basic3tier
+    driver: bridge
+volumes:
+  pgadmin_data:
+    name: dockercompose16893653877832486288_pgadmin_data
+  postgres_data:
+    name: dockercompose16893653877832486288_postgres_data

@@ -1,0 +1,1 @@
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache

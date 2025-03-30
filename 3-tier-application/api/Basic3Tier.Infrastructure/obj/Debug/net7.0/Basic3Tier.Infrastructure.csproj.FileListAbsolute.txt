@@ -1,0 +1,15 @@
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Infrastructure\obj\Debug\net7.0\Basic3Tier.Infrastructure.csproj.AssemblyReference.cache
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Infrastructure\obj\Debug\net7.0\Basic3Tier.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Infrastructure\obj\Debug\net7.0\Basic3Tier.Infrastructure.AssemblyInfoInputs.cache
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Infrastructure\obj\Debug\net7.0\Basic3Tier.Infrastructure.AssemblyInfo.cs
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Infrastructure\obj\Debug\net7.0\Basic3Tier.Infrastructure.csproj.CoreCompileInputs.cache
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Infrastructure\obj\Debug\net7.0\Basic3Tier.Infrastructure.dll
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Infrastructure\obj\Debug\net7.0\refint\Basic3Tier.Infrastructure.dll
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Infrastructure\obj\Debug\net7.0\Basic3Tier.Infrastructure.pdb
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Infrastructure\bin\Debug\net7.0\Basic3Tier.Infrastructure.deps.json
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Infrastructure\bin\Debug\net7.0\Basic3Tier.Infrastructure.dll
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Infrastructure\bin\Debug\net7.0\Basic3Tier.Infrastructure.pdb
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Infrastructure\bin\Debug\net7.0\Basic3Tier.Core.dll
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Infrastructure\bin\Debug\net7.0\Basic3Tier.Core.pdb
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Infrastructure\obj\Debug\net7.0\Basic3Tier.Infrastructure.csproj.CopyComplete
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Infrastructure\obj\Debug\net7.0\ref\Basic3Tier.Infrastructure.dll

@@ -1,0 +1,15 @@
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Core\bin\Debug\net7.0\Basic3Tier.Core.deps.json
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Core\bin\Debug\net7.0\Basic3Tier.Core.runtimeconfig.json
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Core\bin\Debug\net7.0\Basic3Tier.Core.dll
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Core\bin\Debug\net7.0\Basic3Tier.Core.pdb
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Core\obj\Debug\net7.0\Basic3Tier.Core.csproj.AssemblyReference.cache
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Core\obj\Debug\net7.0\Basic3Tier.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Core\obj\Debug\net7.0\Basic3Tier.Core.AssemblyInfoInputs.cache
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Core\obj\Debug\net7.0\Basic3Tier.Core.AssemblyInfo.cs
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Core\obj\Debug\net7.0\Basic3Tier.Core.csproj.CoreCompileInputs.cache
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Core\obj\Debug\net7.0\EFCoreNpgsqlNetTopologySuite.cs
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Core\obj\Debug\net7.0\Basic3Tier.Core.dll
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Core\obj\Debug\net7.0\refint\Basic3Tier.Core.dll
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Core\obj\Debug\net7.0\Basic3Tier.Core.pdb
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Core\obj\Debug\net7.0\Basic3Tier.Core.genruntimeconfig.cache
+D:\varnode.ai\Workspace\basic-3tier-app\src\api\Basic3TierAPI\Basic3Tier.Core\obj\Debug\net7.0\ref\Basic3Tier.Core.dll
