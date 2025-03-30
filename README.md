@@ -93,7 +93,9 @@ kubectl get svc --namespace ingress-nginx
 ```
 
 ### 7. Exposing the Frontend with an Ingress
-To make the UI accessible from the internet, an Ingress Controller (e.g., ALB Ingress Controller or NGINX Ingress Controller) is needed.
+To make the UI accessible from the internet, create an Ingress resource that sends traffic from the NGINX Ingress Controller load balancer to the services.
+
+
 
 
 
